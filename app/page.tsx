@@ -1,22 +1,10 @@
 'use client'
 
 import Image from 'next/image'
-import Script from 'next/script'
 import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <div>
-      <Script onRender={() => {
-      console.log("foobar")
-      window.AppcuesSettings = { 
-        enableURLDetection: true 
-      }
-    }}   
-    />
-    <>
-      <Script src="//fast.appcues.com/205602.js"/>
-    </>      
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
@@ -51,7 +39,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2>
+          <h2 className='text-3xl font-bold underline'>
             Docs <span>-&gt;</span>
           </h2>
           <p>Review documentation for Amplify's code-first DX (Gen 2).</p>
@@ -96,6 +84,5 @@ export default function Home() {
         </a>
       </div>
     </main>
-    </div>
   )
 }

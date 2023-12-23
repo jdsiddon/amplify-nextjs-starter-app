@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
+import Script from '@/node_modules/next/script'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -18,6 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
+        <Script
+          src="//fast.appcues.com/205602.js"/>
     </html>
   )
 }
